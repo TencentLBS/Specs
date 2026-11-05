@@ -1,0 +1,88 @@
+{
+  "name": "TencentNavKit-XC",
+  "version": "7.10.0",
+  "summary": "TencentNavKit",
+  "homepage": "https://lbs.qq.com",
+  "license": {
+    "type": "Copyright",
+    "text": "Copyright © 1998-2026 Tencent All Rights Reserved"
+  },
+  "authors": {
+    "TencentLBS": "tencentlbspod@outlook.com"
+  },
+  "source": {
+    "http": "https://framework-70105.njc.vod.tencent-cloud.com/nav/TencentNavKit-XC_7.10.0_236.zip",
+    "sha256": "6d77a610b868c66e9e3b40dc254c09ceb39ae34d2995af5df8a14f16ec51c2f1"
+  },
+  "platforms": {
+    "ios": "12.0"
+  },
+  "libraries": [
+    "z",
+    "c++"
+  ],
+  "frameworks": [
+    "UIKit",
+    "Foundation",
+    "AVFoundation",
+    "CoreMotion",
+    "AdSupport"
+  ],
+  "ios": {
+    "user_target_xcconfig": {
+      "OTHER_LDFLAGS[sdk=iphoneos*]": "$(inherited) -weak_framework MetalFX",
+      "OTHER_LDFLAGS[sdk=iphonesimulator*]": "$(inherited)"
+    }
+  },
+  "pod_target_xcconfig": {
+    "OTHER_LDFLAGS": "-lObjC"
+  },
+  "subspecs": [
+    {
+      "name": "TencentNavMapFoundationKit-XC",
+      "vendored_frameworks": "QMapFoundationKit.xcframework"
+    },
+    {
+      "name": "TencentNavMapKit-XC",
+      "vendored_frameworks": "QMapKit.xcframework",
+      "resources": "QMapKit.xcframework/ios-arm64/QMapKit.framework/QMapKit.bundle",
+      "dependencies": {
+        "TencentNavKit-XC/TencentNavMapFoundationKit-XC": [
+
+        ]
+      }
+    },
+    {
+      "name": "TencentNavLocationKit-XC",
+      "vendored_frameworks": "TencentLBS.xcframework",
+      "dependencies": {
+        "TencentNavKit-XC/TencentNavMapFoundationKit-XC": [
+
+        ]
+      }
+    },
+    {
+      "name": "TencentNavKit-XC",
+      "vendored_frameworks": "TencentNavKit.xcframework",
+      "resources": "TencentNavKit.xcframework/ios-arm64/TencentNavKit.framework/TencentNavKit.bundle",
+      "dependencies": {
+        "TencentNavKit-XC/TencentNavMapKit-XC": [
+
+        ],
+        "TencentNavKit-XC/TencentNavLocationKit-XC": [
+
+        ]
+      }
+    },
+    {
+      "name": "TNKAudioPlayer-XC",
+      "vendored_frameworks": "TNKAudioPlayer.xcframework",
+      "resources": "TNKAudioPlayer.xcframework/ios-arm64/TNKAudioPlayer.framework/TencentNavKitTTS.bundle",
+      "dependencies": {
+        "TencentNavKit-XC/TencentNavKit-XC": [
+
+        ]
+      }
+    }
+  ]
+}
