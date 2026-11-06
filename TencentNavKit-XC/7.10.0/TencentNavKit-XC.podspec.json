@@ -26,7 +26,8 @@
     "Foundation",
     "AVFoundation",
     "CoreMotion",
-    "AdSupport"
+    "AdSupport",
+    "CoreML"
   ],
   "ios": {
     "user_target_xcconfig": {
