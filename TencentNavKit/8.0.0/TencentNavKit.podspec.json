@@ -1,0 +1,89 @@
+{
+  "name": "TencentNavKit",
+  "version": "8.0.0",
+  "summary": "TencentNavKit",
+  "homepage": "https://lbs.qq.com",
+  "license": {
+    "type": "Copyright",
+    "text": "Copyright © 1998-2026 Tencent All Rights Reserved"
+  },
+  "authors": {
+    "TencentLBS": "tencentlbspod@outlook.com"
+  },
+  "source": {
+    "http": "https://framework-70105.njc.vod.tencent-cloud.com/nav/TencentNavKit_8.0.0_241.zip",
+    "sha256": "e66263956eb11747ec188c3148d60a9e181bb68e2ac82e36150fd034d7763016"
+  },
+  "platforms": {
+    "ios": "12.0"
+  },
+  "libraries": [
+    "z",
+    "c++"
+  ],
+  "frameworks": [
+    "UIKit",
+    "Foundation",
+    "AVFoundation",
+    "CoreMotion",
+    "AdSupport",
+    "CoreML"
+  ],
+  "ios": {
+    "user_target_xcconfig": {
+      "OTHER_LDFLAGS[sdk=iphoneos*]": "$(inherited) -weak_framework MetalFX",
+      "OTHER_LDFLAGS[sdk=iphonesimulator*]": "$(inherited)"
+    }
+  },
+  "pod_target_xcconfig": {
+    "OTHER_LDFLAGS": "-lObjC"
+  },
+  "subspecs": [
+    {
+      "name": "TencentNavMapFoundationKit",
+      "vendored_frameworks": "QMapFoundationKit.framework"
+    },
+    {
+      "name": "TencentNavMapKit",
+      "vendored_frameworks": "QMapKit.framework",
+      "resources": "QMapKit.framework/QMapKit.bundle",
+      "dependencies": {
+        "TencentNavKit/TencentNavMapFoundationKit": [
+
+        ]
+      }
+    },
+    {
+      "name": "TencentNavLocationKit",
+      "vendored_frameworks": "TencentLBS.framework",
+      "dependencies": {
+        "TencentNavKit/TencentNavMapFoundationKit": [
+
+        ]
+      }
+    },
+    {
+      "name": "TencentNavKit",
+      "vendored_frameworks": "TencentNavKit.framework",
+      "resources": "TencentNavKit.framework/TencentNavKit.bundle",
+      "dependencies": {
+        "TencentNavKit/TencentNavMapKit": [
+
+        ],
+        "TencentNavKit/TencentNavLocationKit": [
+
+        ]
+      }
+    },
+    {
+      "name": "TNKAudioPlayer",
+      "vendored_frameworks": "TNKAudioPlayer.framework",
+      "resources": "TNKAudioPlayer.framework/TencentNavKitTTS.bundle",
+      "dependencies": {
+        "TencentNavKit/TencentNavKit": [
+
+        ]
+      }
+    }
+  ]
+}
