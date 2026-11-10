@@ -11,8 +11,8 @@
     "mikedpzhang": "mikedpzhang@tencent.com"
   },
   "source": {
-    "http": "https://framework-70105.njc.vod.tencent-cloud.com/nav/TencentNavKit_7.8.4_244.zip",
-    "sha256": "804878a073acdf64e9cc4ea91c042502cc58b2b5d74837a65b00a0295706c459"
+    "http": "https://framework-70105.njc.vod.tencent-cloud.com/nav/TencentNavKit_7.8.4_246.zip",
+    "sha256": "98c5ed3d21aac5e300fa9cdf8a0822586f1975b1f5165716f600b75268d1337a"
   },
   "platforms": {
     "ios": "12.0"
