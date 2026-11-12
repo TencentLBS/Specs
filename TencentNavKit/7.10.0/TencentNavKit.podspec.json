@@ -11,8 +11,8 @@
     "TencentLBS": "tencentlbspod@outlook.com"
   },
   "source": {
-    "http": "https://framework-70105.njc.vod.tencent-cloud.com/nav/TencentNavKit_7.10.0_232.zip",
-    "sha256": "13b975c9684edf295bc8ec32395948dae7d8cf8807382e9b8866d2b1ff74bd25"
+    "http": "https://framework-70105.njc.vod.tencent-cloud.com/nav/TencentNavKit_7.10.0fix1_249.zip",
+    "sha256": "6a2d63efa414dbe60d6cbaa84b88bada568ffe8c4cb74fd3fbd2ca3c866f7095"
   },
   "platforms": {
     "ios": "12.0"
