@@ -1,0 +1,39 @@
+{
+  "name": "Tencent-MapUtils",
+  "version": "1.2.6",
+  "summary": "Tencent-MapUtils",
+  "homepage": "https://lbs.qq.com/mobile/iOSMapSDK/mapGuide/summary",
+  "license": {
+    "type": "MIT"
+  },
+  "authors": {
+    "TencentLBS": "tencentlbspod@outlook.com"
+  },
+  "source": {
+    "http": "https://framework-70105.njc.vod.tencent-cloud.com/mapUltis/result/QMapSDKUtils_1.2.6-1787215562.zip",
+    "sha256": "128ef3f408a03d4eccfb4038a5bc7a1a6625daab41cf58e9bb3592f981785fe0"
+  },
+  "platforms": {
+    "ios": "12.0"
+  },
+  "vendored_frameworks": "QMapSDKUtils.framework",
+  "libraries": [
+    "z",
+    "c++"
+  ],
+  "frameworks": [
+    "UIKit",
+    "Foundation"
+  ],
+  "user_target_xcconfig": {
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64"
+  },
+  "pod_target_xcconfig": {
+    "OTHER_LDFLAGS": "-lObjC"
+  },
+  "dependencies": {
+    "Tencent-MapSDK": [
+      ">=5.1.0"
+    ]
+  }
+}
