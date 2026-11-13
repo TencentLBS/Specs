@@ -14,7 +14,7 @@
     "sha256": "128ef3f408a03d4eccfb4038a5bc7a1a6625daab41cf58e9bb3592f981785fe0"
   },
   "platforms": {
-    "ios": "12.0"
+    "ios": "10.0"
   },
   "vendored_frameworks": "QMapSDKUtils.framework",
   "libraries": [
@@ -30,10 +30,5 @@
   },
   "pod_target_xcconfig": {
     "OTHER_LDFLAGS": "-lObjC"
-  },
-  "dependencies": {
-    "Tencent-MapSDK": [
-      ">=5.1.0"
-    ]
   }
 }
